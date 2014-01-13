@@ -1,4 +1,4 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 Name:         codemodel
 Version:      2.6
 Release:      10.0%{?dist}
@@ -62,3 +62,39 @@ find . -name '*.jar' -print -delete
 
 %files javadoc -f .mfiles-javadoc
 %doc LICENSE.html
+
+%changelog
+* Mon Aug 05 2013 gil cattaneo <puntogil@libero.it> 2.6-10
+- rebuilt FTBFS in rawhide
+- swith to Xmvn
+- adapt to new guideline
+
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.6-9
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
+* Wed Feb 13 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.6-8
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
+
+* Wed Feb 06 2013 Java SIG <java-devel@lists.fedoraproject.org> - 2.6-7
+- Update for https://fedoraproject.org/wiki/Fedora_19_Maven_Rebuild
+- Replace maven BuildRequires with maven-local
+
+* Sat Jul 21 2012 Juan Hernandez <juan.hernandez@redhat.com> 2.6-6
+- Add maven-enforcer-plugin as build time dependeny
+
+* Wed Jul 18 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.6-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
+* Sat Mar 31 2012 Juan Hernandez <juan.hernandez@redhat.com> 2.6-4
+- Restore the dependency on jvnet-parent
+- Remove the dependency on istack-commons
+
+* Tue Feb 14 2012 Juan Hernandez <juan.hernandez@redhat.com> 2.6-3
+- Added build requirement for maven-surefire-provider-junit4
+
+* Tue Feb 14 2012 Juan Hernandez <juan.hernandez@redhat.com> 2.6-2
+- Cleanup of the spec file
+
+* Mon Jan 16 2012 Marek Goldmann <mgoldman@redhat.com> 2.6-1
+- Initial packaging
+
