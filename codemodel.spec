@@ -1,9 +1,10 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:         codemodel
 Version:      2.6
-Release:      10.0%{?dist}
+Release:      15.1
 Summary:      Java library for code generators
 License:      CDDL and GPLv2
+Group:		Development/Java
 URL:          http://codemodel.java.net
 # svn export https://svn.java.net/svn/codemodel~svn/tags/codemodel-project-2.6/ codemodel-2.6
 # tar -zcvf codemodel-2.6.tar.gz codemodel-2.6
@@ -14,18 +15,13 @@ Patch0:       %{name}-remove-istack-commons-dependency.patch
 
 BuildArch:     noarch
 
-BuildRequires: java-devel
-
 BuildRequires: maven-local
 BuildRequires: maven-enforcer-plugin
 BuildRequires: maven-release-plugin
-BuildRequires: maven-surefire-provider-junit4
-BuildRequires: mvn(net.java:jvnet-parent)
+BuildRequires: maven-surefire-provider-junit
+BuildRequires: mvn(net.java:jvnet-parent:pom:)
 BuildRequires: mvn(org.apache.ant:ant)
 BuildRequires: mvn(junit:junit)
-
-Requires:      mvn(net.java:jvnet-parent)
-
 
 %description
 CodeModel is a Java library for code generators; it provides a way to
