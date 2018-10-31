@@ -1,7 +1,7 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:         codemodel
 Version:      2.6
-Release:      15.2
+Release:      15.3
 Summary:      Java library for code generators
 License:      CDDL and GPLv2
 Group:		Development/Java
