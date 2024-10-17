@@ -5,7 +5,7 @@ Release:      15.3
 Summary:      Java library for code generators
 License:      CDDL and GPLv2
 Group:		Development/Java
-URL:          http://codemodel.java.net
+URL:          https://codemodel.java.net
 # svn export https://svn.java.net/svn/codemodel~svn/tags/codemodel-project-2.6/ codemodel-2.6
 # tar -zcvf codemodel-2.6.tar.gz codemodel-2.6
 Source0:      %{name}-%{version}.tar.gz
